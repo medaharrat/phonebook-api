@@ -1,0 +1,39 @@
+VSC React Client Test
+
+###
+# Create a new user
+POST http://localhost:8000/api/subscribers/create
+Content-Type: application/json
+
+{
+    "name": "josh",
+    "phone": "0123456789"
+}
+
+###
+# Create the same user with a different number
+POST http://localhost:8000/api/subscribers/create
+Content-Type: application/json
+
+{
+    "name": "josh",
+    "phone": "1234567890"
+}
+
+###
+# Get all records
+GET http://localhost:8000/api/subscribers/
+
+###
+# Get one user by phone
+GET http://localhost:8000/api/subscribers/0123456789
+###
+
+###
+# Get phone numbers by subscriber name
+GET http://localhost:8000/api/phones/josh
+###
+
+###
+# Delete a subscriber with phone numbers assigned to it
+POST https://localhost:8000/subscribers/delete/
