@@ -3,7 +3,8 @@ var express  = require("express"),
  http     = require("http"),
  mongoose = require("mongoose"),
  config   = require("./config.json");
-
+ path     = require("path");
+ 
 // Mongoose settings
 mongoose.Promise = global.Promise;
 
@@ -28,7 +29,7 @@ const app = express();
 
 // View engine setup
 app.set("port", config.server.port);
-app.set("views", config.server.views);
+app.set('views', path.join(__dirname, 'views'));
 app.set("view engine", "jade");
 app.use(express.json())
 app.use(config.server.publicUrl, express.static(config.server.public))

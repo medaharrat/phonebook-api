@@ -13,6 +13,10 @@
         "publicUrl": "/files",
         "routers": [
             {
+                "module": "./routers/index.router",
+                "url": "/"
+            },
+            {
                 "module": "./routers/subscriber.router",
                 "url": "/api/subscribers"
             },

@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1 Phonebook API
+  h3 Endpoints 
+  ul
+    li: h4 GET: Get all subscribers and their phone numbers
+      p: a(href="/api/subscribers") /api/subscribers/
+      
+    li: h4 GET: Get a subscriber's name by a phone number
+      p: a(href="/api/subscribers/:phone") /api/subscribers/:phone
+
+    li: h4 POST: Create a new subscriber
+      p: a(href="/api/subscribers/create") /api/subscribers/create
+
+    li: h4 POST: Delete an existing subscriber
+      p: a(href="/api/subscribers/delete") /api/subscribers/delete
+
+    li: h4 GET: Get phone numbers of a subscriber
+      p: a(href="/api/phones/:name") /api/subscribers/:name

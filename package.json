@@ -6,7 +6,6 @@
     "start": "nodemon app"
   },
   "dependencies": {
-    "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "jade": "^0.29.0",
