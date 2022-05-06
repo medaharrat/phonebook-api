@@ -1,0 +1,25 @@
+{
+    "debug": true,
+    "server": {
+        "database": {
+            "protocol": "mongodb+srv",
+            "user": "root",
+            "password": "admin123",
+            "host": "bookhousecluster.tejiq.mongodb.net",
+            "database": "phonebook?retryWrites=true&w=majority"
+        }, 
+        "port": 8000,
+        "public": "../../public",
+        "publicUrl": "/files",
+        "routers": [
+            {
+                "module": "./routers/subscriber.router",
+                "url": "/api/subscribers"
+            },
+            {
+                "module": "./routers/phone.router",
+                "url": "/api/phones"
+            }
+        ]
+    }
+}
